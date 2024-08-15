@@ -30,6 +30,32 @@ df['is_adult'] = df['age'].apply(lambda x: 'Yes' if x > 18 else 'No')
 print(df)
 
 
+# Q-4 : same for in PySpark 
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import when
+
+# Create a Spark session
+spark = SparkSession.builder.appName("example").getOrCreate()
+
+# Sample data
+data = [
+    ("John", 20),
+    ("Alice", 17),
+    ("Bob", 22),
+    ("Emma", 16)
+]
+
+# Create DataFrame
+df = spark.createDataFrame(data, ["student", "age"])
+df.show()
+
+
+# Add the "is_adult" column
+df = df.withColumn("is_adult", when(df["age"] > 18, "Yes").otherwise("No"))
+df.show()
+
+
+# Q-5 : Same quesry for in sql
 
 
 
