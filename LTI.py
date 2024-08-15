@@ -56,7 +56,18 @@ df.show()
 
 
 # Q-5 : Same quesry for in sql
+'''
+SELECT
+    student,
+    age,
+    CASE
+        WHEN age > 18 THEN 'Yes'
+        ELSE 'No'
+    END AS is_adult
+FROM
+    students;
 
+'''
 
 
 
