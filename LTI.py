@@ -13,6 +13,12 @@ Input_lst = [1,2,3,4]
 output_lst = [x + 1 for x in Input_lst]
 print(output_lst)
 
+# another way 
+
+output_lst = []
+for num in lst:
+    output_lst.append(num + 1)
+print(output_lst)
 
 # Q-3 : You are given a DataFrame with two columns: student and age. Write a Python program using pandas to add a new column named is_adult. This column should contain "Yes" if the corresponding age is greater than 18, otherwise "No".
 
