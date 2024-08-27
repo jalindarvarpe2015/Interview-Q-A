@@ -1,0 +1,1 @@
+# word count program in scala and python 
