@@ -21,3 +21,19 @@ sorted_word_counts = word_counts.orderBy(col("count").desc())
 
 # Show the result
 sorted_word_counts.show(truncate=False)
+
+
+
+# import org.apache.spark.SparkContext
+# import org.apache.spark.SparkConf
+
+# val textFile = sc.textFile("demoscala.txt")
+# val counts = textFile
+#   .flatMap(line => line.split(" "))
+#   .map(word => (word, 1))
+#   .reduceByKey(_ + _)
+
+# // Collect the results and print each word with its count
+# counts.collect().foreach { case (word, count) =>
+#   println(s"$word: $count")
+# }
